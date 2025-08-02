@@ -132,3 +132,4 @@ C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking\Co
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking\CoreBanking.AppHost\bin\Debug\net9.0\Npgsql.dll
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking\CoreBanking.AppHost\bin\Debug\net9.0\Semver.dll
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking\CoreBanking.AppHost\obj\Debug\net9.0\Aspire\references\CoreBanking_MigrationService.ProjectMetadata.g.cs
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking\CoreBanking.AppHost\obj\Debug\net9.0\CoreBanking.AppHost.sourcelink.json

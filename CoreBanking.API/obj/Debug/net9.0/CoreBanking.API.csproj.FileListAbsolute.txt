@@ -72,3 +72,6 @@ C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.AP
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\CoreBanking.API.pdb
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\CoreBanking.API.genruntimeconfig.cache
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\ref\CoreBanking.API.dll
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\bin\Debug\net9.0\Asp.Versioning.Abstractions.dll
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\bin\Debug\net9.0\Asp.Versioning.Http.dll
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\CoreBanking.API.sourcelink.json

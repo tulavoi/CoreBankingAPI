@@ -1,1 +1,137 @@
-[]
+[
+  {
+    "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
+    "Method": "GetAccounts",
+    "RelativePath": "api/v{version: vApi}/corebanking/accounts",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CoreBanking"
+    ]
+  },
+  {
+    "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
+    "Method": "Deposit",
+    "RelativePath": "api/v{version: vApi}/corebanking/accounts/{id:guid}/deposit",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CoreBanking"
+    ]
+  },
+  {
+    "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
+    "Method": "Transfer",
+    "RelativePath": "api/v{version: vApi}/corebanking/accounts/{id:guid}/transfer",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CoreBanking"
+    ]
+  },
+  {
+    "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
+    "Method": "Withdraw",
+    "RelativePath": "api/v{version: vApi}/corebanking/accounts/{id:guid}/withdraw",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CoreBanking"
+    ]
+  },
+  {
+    "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
+    "Method": "GetCustomers",
+    "RelativePath": "api/v{version: vApi}/corebanking/customers",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageIndex",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CoreBanking"
+    ]
+  }
+]

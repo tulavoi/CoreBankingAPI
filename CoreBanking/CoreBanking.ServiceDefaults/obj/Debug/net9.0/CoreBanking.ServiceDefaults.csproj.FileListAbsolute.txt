@@ -10,3 +10,4 @@ C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking\Co
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking\CoreBanking.ServiceDefaults\obj\Debug\net9.0\refint\CoreBanking.ServiceDefaults.dll
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking\CoreBanking.ServiceDefaults\obj\Debug\net9.0\CoreBanking.ServiceDefaults.pdb
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking\CoreBanking.ServiceDefaults\obj\Debug\net9.0\ref\CoreBanking.ServiceDefaults.dll
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking\CoreBanking.ServiceDefaults\obj\Debug\net9.0\CoreBanking.ServiceDefaults.sourcelink.json

@@ -46,3 +46,4 @@ C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.Mi
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\obj\Debug\net9.0\CoreBanking.MigrationService.pdb
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\obj\Debug\net9.0\CoreBanking.MigrationService.genruntimeconfig.cache
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\obj\Debug\net9.0\ref\CoreBanking.MigrationService.dll
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\obj\Debug\net9.0\CoreBanking.MigrationService.sourcelink.json
