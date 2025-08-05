@@ -65,7 +65,6 @@ C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.AP
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\CoreBank.B08C9103.Up2Date
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\CoreBanking.API.dll
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\refint\CoreBanking.API.dll
@@ -75,3 +74,4 @@ C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.AP
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\bin\Debug\net9.0\Asp.Versioning.Abstractions.dll
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\bin\Debug\net9.0\Asp.Versioning.Http.dll
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\CoreBanking.API.sourcelink.json
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
