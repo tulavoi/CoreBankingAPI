@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2291338-BA3E-48CA-9692-D157A5163BFC}|CoreBanking.MigrationService\\CoreBanking.MigrationService.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking.migrationservice\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2291338-BA3E-48CA-9692-D157A5163BFC}|CoreBanking.MigrationService\\CoreBanking.MigrationService.csproj|solutionrelative:corebanking.migrationservice\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C04F4789-0A11-4DFA-90F3-C52B6EB00252}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking.infrastructure\\data\\corebankingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C04F4789-0A11-4DFA-90F3-C52B6EB00252}|CoreBanking.Infrastructure\\CoreBanking.Infrastructure.csproj|solutionrelative:corebanking.infrastructure\\data\\corebankingdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFF3523C-BAB6-460D-AAAF-EBA2613C2CD4}|CoreBanking\\CoreBanking.AppHost\\CoreBanking.AppHost.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking\\corebanking.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFF3523C-BAB6-460D-AAAF-EBA2613C2CD4}|CoreBanking\\CoreBanking.AppHost\\CoreBanking.AppHost.csproj|solutionrelative:corebanking\\corebanking.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D2291338-BA3E-48CA-9692-D157A5163BFC}|CoreBanking.MigrationService\\CoreBanking.MigrationService.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking.migrationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2291338-BA3E-48CA-9692-D157A5163BFC}|CoreBanking.MigrationService\\CoreBanking.MigrationService.csproj|solutionrelative:corebanking.migrationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F3C4C29-CA35-4374-9AFD-F0C1C7AEAFB1}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking.api\\apis\\corebankingapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F3C4C29-CA35-4374-9AFD-F0C1C7AEAFB1}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\apis\\corebankingapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2291338-BA3E-48CA-9692-D157A5163BFC}|CoreBanking.MigrationService\\CoreBanking.MigrationService.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking.migrationservice\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2291338-BA3E-48CA-9692-D157A5163BFC}|CoreBanking.MigrationService\\CoreBanking.MigrationService.csproj|solutionrelative:corebanking.migrationservice\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F3C4C29-CA35-4374-9AFD-F0C1C7AEAFB1}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking.api\\models\\paginationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F3C4C29-CA35-4374-9AFD-F0C1C7AEAFB1}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\models\\paginationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF3523C-BAB6-460D-AAAF-EBA2613C2CD4}|CoreBanking\\CoreBanking.AppHost\\CoreBanking.AppHost.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking\\corebanking.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF3523C-BAB6-460D-AAAF-EBA2613C2CD4}|CoreBanking\\CoreBanking.AppHost\\CoreBanking.AppHost.csproj|solutionrelative:corebanking\\corebanking.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,21 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 193,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CoreBankingApi.cs",
-              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.API\\Apis\\CoreBankingApi.cs",
-              "RelativeDocumentMoniker": "CoreBanking.API\\Apis\\CoreBankingApi.cs",
-              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.API\\Apis\\CoreBankingApi.cs",
-              "RelativeToolTip": "CoreBanking.API\\Apis\\CoreBankingApi.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAUwDoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T08:53:58.872Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -71,64 +50,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppHost.cs",
-              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking\\CoreBanking.AppHost\\AppHost.cs",
-              "RelativeDocumentMoniker": "CoreBanking\\CoreBanking.AppHost\\AppHost.cs",
-              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking\\CoreBanking.AppHost\\AppHost.cs",
-              "RelativeToolTip": "CoreBanking\\CoreBanking.AppHost\\AppHost.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:21:57.713Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.MigrationService\\Program.cs",
-              "RelativeDocumentMoniker": "CoreBanking.MigrationService\\Program.cs",
-              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.MigrationService\\Program.cs",
-              "RelativeToolTip": "CoreBanking.MigrationService\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T08:57:13.349Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Worker.cs",
               "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.MigrationService\\Worker.cs",
               "RelativeDocumentMoniker": "CoreBanking.MigrationService\\Worker.cs",
               "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.MigrationService\\Worker.cs",
               "RelativeToolTip": "CoreBanking.MigrationService\\Worker.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAuwCcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T08:55:35.871Z",
+              "WhenOpened": "2025-08-06T08:35:33.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CoreBankingDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.Infrastructure\\Data\\CoreBankingDbContext.cs",
-              "RelativeDocumentMoniker": "CoreBanking.Infrastructure\\Data\\CoreBankingDbContext.cs",
-              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.Infrastructure\\Data\\CoreBankingDbContext.cs",
-              "RelativeToolTip": "CoreBanking.Infrastructure\\Data\\CoreBankingDbContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAsAAABBAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.MigrationService\\Program.cs",
+              "RelativeDocumentMoniker": "CoreBanking.MigrationService\\Program.cs",
+              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.MigrationService\\Program.cs",
+              "RelativeToolTip": "CoreBanking.MigrationService\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-03T08:24:02.853Z"
+              "WhenOpened": "2025-08-06T08:16:49.789Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "AppHost.cs",
+              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking\\CoreBanking.AppHost\\AppHost.cs",
+              "RelativeDocumentMoniker": "CoreBanking\\CoreBanking.AppHost\\AppHost.cs",
+              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking\\CoreBanking.AppHost\\AppHost.cs",
+              "RelativeToolTip": "CoreBanking\\CoreBanking.AppHost\\AppHost.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T09:21:57.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PaginationResponse.cs",
               "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.API\\Models\\PaginationResponse.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Models\\PaginationResponse.cs",
               "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.API\\Models\\PaginationResponse.cs",
               "RelativeToolTip": "CoreBanking.API\\Models\\PaginationResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T09:43:46.86Z"
+              "WhenOpened": "2025-08-02T09:43:46.86Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -5,6 +5,7 @@ namespace CoreBanking.Infrastructure.Data;
 
 public class CoreBankingDbContext : DbContext
 {
+	public CoreBankingDbContext() { }
 	public CoreBankingDbContext(DbContextOptions<CoreBankingDbContext> options) : base(options) { }
 
 	public DbSet<Customer> Customers { get; set; } = default!;

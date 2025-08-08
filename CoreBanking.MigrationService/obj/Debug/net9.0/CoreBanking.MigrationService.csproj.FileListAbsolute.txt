@@ -81,3 +81,9 @@ C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.Mi
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\bin\Debug\net9.0\CoreBanking.ServiceDefaults.dll
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\bin\Debug\net9.0\CoreBanking.Infrastructure.pdb
 C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\bin\Debug\net9.0\CoreBanking.ServiceDefaults.pdb
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\bin\Debug\net9.0\Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\bin\Debug\net9.0\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\bin\Debug\net9.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\bin\Debug\net9.0\Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\bin\Debug\net9.0\Npgsql.DependencyInjection.dll
+C:\Users\khach\OneDrive\Documents\ASP.Net\Nam.Net\CoreBanking.NET\CoreBanking.MigrationService\bin\Debug\net9.0\Npgsql.OpenTelemetry.dll

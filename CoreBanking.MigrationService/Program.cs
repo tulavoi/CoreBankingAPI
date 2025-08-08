@@ -7,19 +7,9 @@ var builder = Host.CreateApplicationBuilder(args);
 builder.AddServiceDefaults();
 builder.Services.AddHostedService<Worker>();
 
-//builder.AddNpgsqlDbContext<CoreBankingDbContext>("corebanking-db", configureDbContextOptions: dbContextOptionBuilder =>
-//{
-//	dbContextOptionBuilder.useNpgsql(builder => builder.MigrationsAssembly(typeof(CoreBankingDbContext).Assembly.FullName));
-//});
-
-builder.Services.AddDbContext<CoreBankingDbContext>(options =>
+builder.AddNpgsqlDbContext<CoreBankingDbContext>("corebanking-db", configureDbContextOptions: dbContextOptionBuilder =>
 {
-	options.UseNpgsql(
-		builder.Configuration.GetConnectionString("corebanking-db"),
-		npgsqlOptions =>
-		{
-			npgsqlOptions.MigrationsAssembly(typeof(CoreBankingDbContext).Assembly.FullName);
-		});
+	dbContextOptionBuilder.UseNpgsql(builder => builder.MigrationsAssembly(typeof(CoreBankingDbContext).Assembly.FullName));
 });
 
 var host = builder.Build();
