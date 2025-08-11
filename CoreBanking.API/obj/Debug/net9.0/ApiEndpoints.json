@@ -2,7 +2,7 @@
   {
     "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
     "Method": "GetAccounts",
-    "RelativePath": "api/v{version: vApi}/corebanking/accounts",
+    "RelativePath": "api/v{version:apiVersion}/corebanking/accounts",
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,
@@ -32,7 +32,7 @@
   {
     "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
     "Method": "Deposit",
-    "RelativePath": "api/v{version: vApi}/corebanking/accounts/{id:guid}/deposit",
+    "RelativePath": "api/v{version:apiVersion}/corebanking/accounts/{id:guid}/deposit",
     "HttpMethod": "PUT",
     "IsController": false,
     "Order": 0,
@@ -57,7 +57,7 @@
   {
     "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
     "Method": "Transfer",
-    "RelativePath": "api/v{version: vApi}/corebanking/accounts/{id:guid}/transfer",
+    "RelativePath": "api/v{version:apiVersion}/corebanking/accounts/{id:guid}/transfer",
     "HttpMethod": "PUT",
     "IsController": false,
     "Order": 0,
@@ -82,7 +82,7 @@
   {
     "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
     "Method": "Withdraw",
-    "RelativePath": "api/v{version: vApi}/corebanking/accounts/{id:guid}/withdraw",
+    "RelativePath": "api/v{version:apiVersion}/corebanking/accounts/{id:guid}/withdraw",
     "HttpMethod": "PUT",
     "IsController": false,
     "Order": 0,
@@ -107,26 +107,28 @@
   {
     "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
     "Method": "GetCustomers",
-    "RelativePath": "api/v{version: vApi}/corebanking/customers",
+    "RelativePath": "api/v{version:apiVersion}/corebanking/customers",
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "PageSize",
+        "Name": "pageSize",
         "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "PageIndex",
+        "Name": "pageIndex",
         "Type": "System.Int32",
         "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
+        "Type": "CoreBanking.API.Models.PaginationResponse\u00601[[CoreBanking.Infrastructure.Models.Customer, CoreBanking.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
         "StatusCode": 200
       }
     ],

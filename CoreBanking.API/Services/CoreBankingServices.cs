@@ -1,6 +1,9 @@
-﻿namespace CoreBanking.API.Services;
+﻿using CoreBanking.Infrastructure.Data;
 
-public class CoreBankingServices(ILogger<CoreBankingServices> logger)
+namespace CoreBanking.API.Services;
+
+public class CoreBankingServices(CoreBankingDbContext dbContext, ILogger<CoreBankingServices> logger)
 {
+	public CoreBankingDbContext DbContext { get; } = dbContext;
 	public ILogger<CoreBankingServices> Logger => logger;
 }

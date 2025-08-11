@@ -4,11 +4,11 @@ var postgres = builder.AddPostgres("postgres")
 	.WithImageTag("latest")
 	.WithVolume("corebanking-db", "/var/lib/postgressql/data")
 	.WithLifetime(ContainerLifetime.Persistent)
-	.WithPgAdmin(rbuilder =>
-	{
-		rbuilder.WithImageTag("latest");
-	});
-	//.WithPgWeb();
+	.WithPgWeb();
+	//.WithPgAdmin(rbuilder =>
+	//{
+	//	rbuilder.WithImageTag("latest");
+	//});
 
 var coreBankingDb = postgres.AddDatabase("corebanking-db", "corebanking");
 

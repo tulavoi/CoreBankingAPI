@@ -18,6 +18,11 @@ public static class ApplicationServiceExtensions
 			}	
 		);
 
+		builder.AddNpgsqlDbContext<CoreBankingDbContext>("corebanking-db", configureDbContextOptions: dbContextOptionBuilder =>
+		{
+			dbContextOptionBuilder.UseNpgsql(builder => builder.MigrationsAssembly(typeof(CoreBankingDbContext).Assembly.FullName));
+		});
+
 		return builder;
 	}
 }
