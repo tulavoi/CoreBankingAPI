@@ -16,13 +16,52 @@
         "Name": "PageIndex",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "customerId",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
+        "Type": "CoreBanking.API.Models.PaginationResponse\u00601[[CoreBanking.Infrastructure.Models.Account, CoreBanking.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CoreBanking"
+    ]
+  },
+  {
+    "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
+    "Method": "CreateAccounts",
+    "RelativePath": "api/v{version:apiVersion}/corebanking/accounts",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "account",
+        "Type": "CoreBanking.Infrastructure.Models.Account",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CoreBanking.Infrastructure.Models.Account",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
         "Type": "System.Void",
         "MediaTypes": [],
-        "StatusCode": 200
+        "StatusCode": 400
       }
     ],
     "Tags": [
@@ -41,13 +80,25 @@
         "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
+      },
+      {
+        "Name": "deposition",
+        "Type": "CoreBanking.API.Models.DepositionRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
+        "Type": "CoreBanking.Infrastructure.Models.Account",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
         "Type": "System.Void",
         "MediaTypes": [],
-        "StatusCode": 200
+        "StatusCode": 400
       }
     ],
     "Tags": [
@@ -66,13 +117,25 @@
         "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
+      },
+      {
+        "Name": "transfer",
+        "Type": "CoreBanking.API.Models.TransferRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
+        "Type": "CoreBanking.Infrastructure.Models.Account",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
         "Type": "System.Void",
         "MediaTypes": [],
-        "StatusCode": 200
+        "StatusCode": 400
       }
     ],
     "Tags": [
@@ -91,13 +154,25 @@
         "Name": "id",
         "Type": "System.Guid",
         "IsRequired": true
+      },
+      {
+        "Name": "withdrawal",
+        "Type": "CoreBanking.API.Models.WithdrawalRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
+        "Type": "CoreBanking.Infrastructure.Models.Account",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
         "Type": "System.Void",
         "MediaTypes": [],
-        "StatusCode": 200
+        "StatusCode": 400
       }
     ],
     "Tags": [
@@ -113,12 +188,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pageSize",
+        "Name": "PageSize",
         "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "pageIndex",
+        "Name": "PageIndex",
         "Type": "System.Int32",
         "IsRequired": false
       }
@@ -130,6 +205,38 @@
           "application/json"
         ],
         "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "CoreBanking"
+    ]
+  },
+  {
+    "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
+    "Method": "CreateCustomer",
+    "RelativePath": "api/v{version:apiVersion}/corebanking/customers",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "CoreBanking.Infrastructure.Models.Customer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CoreBanking.Infrastructure.Models.Customer",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 400
       }
     ],
     "Tags": [

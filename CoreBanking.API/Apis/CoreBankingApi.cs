@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.Diagnostics;
-
-namespace CoreBanking.API.Apis;
+﻿namespace CoreBanking.API.Apis;
 
 public static class CoreBankingApi
 {
@@ -21,31 +19,260 @@ public static class CoreBankingApi
 		return endpoint;
 	}
 
-	private static async Task Transfer(Guid id)
+	#region Transfer
+	private static async Task<Results<Ok<Account>, BadRequest>> Transfer(
+			[AsParameters] CoreBankingServices services,
+			Guid id,
+			TransferRequest transfer
+		)
 	{
-		throw new NotImplementedException();
+		if (id == Guid.Empty)
+		{
+			services.Logger.LogError($"Account Id cannot be empty");
+			return TypedResults.BadRequest();
+		}
+
+		if (string.IsNullOrEmpty(transfer.DestinationAccountNumber))
+		{
+			services.Logger.LogError($"Destination account number cannot be empty");
+			return TypedResults.BadRequest();
+		}
+
+		if (transfer.Amount <= 0)
+		{
+			services.Logger.LogError($"Amount must be greater than zero");
+			return TypedResults.BadRequest();
+		}
+
+		var account = await services.DbContext.Accounts.FindAsync(id);
+
+		if (account == null)
+		{
+			services.Logger.LogError($"Account not found");
+			return TypedResults.BadRequest();
+		}
+
+		if (account.Balance < transfer.Amount)
+		{
+			services.Logger.LogError($"Insufficient funds");
+			return TypedResults.BadRequest();
+		}
+
+		var destinationAccount = await services.DbContext.Accounts
+			.FirstOrDefaultAsync(a => a.AccountNumber == transfer.DestinationAccountNumber);
+
+		if (destinationAccount == null)
+		{
+			services.Logger.LogError($"Destination account not found");
+			return TypedResults.BadRequest();
+		}
+
+		account.Balance -= transfer.Amount;
+		destinationAccount.Balance += transfer.Amount;
+
+		try
+		{
+			var now = DateTime.UtcNow;
+
+			// Add a withdrawal transaction for the source account
+			services.DbContext.Transactions.Add(new Transaction
+			{
+				Id = Guid.CreateVersion7(),
+				AccountId = account.Id,
+				Amount = transfer.Amount,
+				DateUtc = now,
+				Type = TransactionTypes.Withdraw
+			});
+
+			// Add a deposit transaction for the destination account
+			services.DbContext.Transactions.Add(new Transaction
+			{
+				Id = Guid.CreateVersion7(),
+				AccountId = destinationAccount.Id,
+				Amount = transfer.Amount,
+				DateUtc = now,
+				Type = TransactionTypes.Deposit
+			});
+
+			await services.DbContext.SaveChangesAsync();
+			return TypedResults.Ok(account);
+		}
+		catch (Exception ex)
+		{
+			services.Logger.LogError(ex, "An error occured while transfering");
+			return TypedResults.BadRequest();
+		}
+	}
+	#endregion
+
+	#region Withdraw
+	private static async Task<Results<Ok<Account>, BadRequest>> Withdraw(
+			[AsParameters] CoreBankingServices services,
+			Guid id,
+			WithdrawalRequest withdrawal
+		)
+	{
+		if (id == Guid.Empty)
+		{
+			services.Logger.LogError($"Account Id cannot be empty");
+			return TypedResults.BadRequest();
+		}
+
+		if (withdrawal.Amount <= 0)
+		{
+			services.Logger.LogError($"Amount must be greater than zero");
+			return TypedResults.BadRequest();
+		}
+
+		var account = await services.DbContext.Accounts.FindAsync(id);
+
+		if (account == null)
+		{
+			services.Logger.LogError($"Account not found");
+			return TypedResults.BadRequest();
+		}
+
+		account.Balance -= withdrawal.Amount;
+		if (account.Balance < 0)
+		{
+			services.Logger.LogError($"Insufficient funds");
+			return TypedResults.BadRequest();
+		}
+
+		try
+		{
+			services.DbContext.Transactions.Add(new Transaction
+			{
+				Id = Guid.CreateVersion7(),
+				AccountId = account.Id,
+				Amount = withdrawal.Amount,
+				DateUtc = DateTime.UtcNow,
+				Type = TransactionTypes.Withdraw
+			});
+			services.DbContext.Update(account);
+			await services.DbContext.SaveChangesAsync();
+
+			services.Logger.LogInformation("Withdrawn successfully");
+			return TypedResults.Ok(account);
+		}
+		catch (Exception ex)
+		{
+			services.Logger.LogError(ex, "An error occured while withdrawing");
+			return TypedResults.BadRequest();
+		}
+	}
+	#endregion
+
+	#region Deposit
+	private static async Task<Results<Ok<Account>, BadRequest>> Deposit(
+			[AsParameters] CoreBankingServices services,
+			Guid id,
+			DepositionRequest deposition
+		)
+	{
+		if (id == Guid.Empty)
+		{
+			services.Logger.LogError($"Account Id cannot be empty");
+			return TypedResults.BadRequest();
+		}
+
+		if (deposition.Amount == 0)
+		{
+			services.Logger.LogError($"Amount must be greater than zero");
+			return TypedResults.BadRequest();
+		}
+
+		var account = await services.DbContext.Accounts.FindAsync(id);
+
+		if (account == null)
+		{
+			services.Logger.LogError($"Account not found");
+			return TypedResults.BadRequest();
+		}
+
+		account.Balance += deposition.Amount;
+		try
+		{
+			services.DbContext.Transactions.Add(new Transaction
+			{
+				Id = Guid.CreateVersion7(),
+				AccountId = id,
+				Amount = deposition.Amount,
+				DateUtc = DateTime.UtcNow,
+				Type = TransactionTypes.Deposit
+			});
+			services.DbContext.Update(account);
+			await services.DbContext.SaveChangesAsync();
+
+			services.Logger.LogInformation("Deposited successfully");
+			return TypedResults.Ok(account);
+		}
+		catch (Exception ex)
+		{
+			services.Logger.LogError(ex, "An error occured while depositing");
+			return TypedResults.BadRequest();
+		}
+	}
+	#endregion
+
+	#region Account
+	private static async Task<Results<Ok<Account>, BadRequest>> CreateAccounts(
+			[AsParameters] CoreBankingServices services,
+			Account account
+		)
+	{
+		if (account.CustomerId == Guid.Empty)
+		{
+			services.Logger.LogError($"Customer Id cannot be empty");
+			return TypedResults.BadRequest();
+		}
+
+		account.Id = Guid.CreateVersion7();
+		account.Balance = 0;
+		account.AccountNumber = GenerateAccountNumber();
+
+		services.DbContext.Accounts.Add(account);
+		await services.DbContext.SaveChangesAsync();
+
+		services.Logger.LogInformation($"Account created: {account.CustomerId} - {account.AccountNumber}");
+
+		return TypedResults.Ok(account);
 	}
 
-	private static async Task Withdraw(Guid id)
+	private static string GenerateAccountNumber()
 	{
-		throw new NotImplementedException();
+		return DateTime.UtcNow.Ticks.ToString();
 	}
 
-	private static async Task Deposit(Guid id)
+	private static async Task<Ok<PaginationResponse<Account>>> GetAccounts(
+			[AsParameters] CoreBankingServices services,
+			[AsParameters] PaginationRequest pagination,
+			Guid? customerId = null
+		)
 	{
-		throw new NotImplementedException();
-	}
+		services.Logger.LogInformation($"Fetching accounts with pagination: PageSize={pagination.PageSize}, PageIndex={pagination.PageIndex}");
 
-	private static async Task CreateAccounts(HttpContext context)
-	{
-		throw new NotImplementedException();
-	}
+		IQueryable<Account> accounts = services.DbContext.Accounts;
 
-	private static async Task GetAccounts([AsParameters] PaginationRequest pagination)
-	{
-		throw new NotImplementedException();
-	}
+		if (customerId.HasValue)
+		{
+			accounts = accounts.Where(a => a.CustomerId == customerId);
+		}
 
+		return TypedResults.Ok(new PaginationResponse<Account>(
+			pagination.PageIndex,
+			pagination.PageSize,
+			await accounts.CountAsync(),
+			await accounts
+				.OrderBy(c => c.AccountNumber)
+				.Skip(pagination.PageIndex * pagination.PageSize)
+				.Take(pagination.PageSize)
+				.ToListAsync()
+		));
+	}
+	#endregion
+
+	#region Customer
 	private static async Task<Results<Ok<Customer>, BadRequest>> CreateCustomer(
 			[AsParameters] CoreBankingServices services,
 			Customer customer
@@ -74,14 +301,11 @@ public static class CoreBankingApi
 
 	private static async Task<Ok<PaginationResponse<Customer>>> GetCustomers(
 			[AsParameters] CoreBankingServices services,
-			//[AsParameters] PaginationRequest pagination,
-			int pageSize = 10,
-			int pageIndex = 0
+			[AsParameters] PaginationRequest pagination
 		)
 	{
-		services.Logger.LogInformation($"Fetching customers with pagination: PageSize={pageSize}, PageIndex={pageIndex}");
+		services.Logger.LogInformation($"Fetching customers with pagination: PageSize={pagination.PageSize}, PageIndex={pagination.PageIndex}");
 
-		var pagination = new PaginationRequest(pageSize, pageIndex);
 		return TypedResults.Ok(new PaginationResponse<Customer>(
 			pagination.PageIndex,
 			pagination.PageSize,
@@ -93,4 +317,5 @@ public static class CoreBankingApi
 				.ToListAsync()
 		));
 	}
+	#endregion
 }
