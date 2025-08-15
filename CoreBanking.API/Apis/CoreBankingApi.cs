@@ -164,7 +164,7 @@ public static class CoreBankingApi
 	#endregion
 
 	#region Deposit
-	private static async Task<Results<Ok<Account>, BadRequest>> Deposit(
+	public static async Task<Results<Ok<Account>, BadRequest>> Deposit(
 			[AsParameters] CoreBankingServices services,
 			Guid id,
 			DepositionRequest deposition
@@ -216,7 +216,7 @@ public static class CoreBankingApi
 	#endregion
 
 	#region Account
-	private static async Task<Results<Ok<Account>, BadRequest>> CreateAccounts(
+	public static async Task<Results<Ok<Account>, BadRequest>> CreateAccounts(
 			[AsParameters] CoreBankingServices services,
 			Account account
 		)
@@ -273,7 +273,7 @@ public static class CoreBankingApi
 	#endregion
 
 	#region Customer
-	private static async Task<Results<Ok<Customer>, BadRequest>> CreateCustomer(
+	public static async Task<Results<Ok<Customer>, BadRequest>> CreateCustomer(
 			[AsParameters] CoreBankingServices services,
 			Customer customer
 		)
