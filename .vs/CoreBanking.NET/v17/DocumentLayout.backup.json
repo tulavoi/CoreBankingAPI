@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 193,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -32,23 +32,9 @@
               "RelativeDocumentMoniker": "CoreBanking.API\\Apis\\CoreBankingApi.cs",
               "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.API\\Apis\\CoreBankingApi.cs",
               "RelativeToolTip": "CoreBanking.API\\Apis\\CoreBankingApi.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAIAwwKsAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAWwLMAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-15T08:11:44.989Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CustomerUnitTests.cs",
-              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.UnitTests\\CustomerUnitTests.cs",
-              "RelativeDocumentMoniker": "CoreBanking.UnitTests\\CustomerUnitTests.cs",
-              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.UnitTests\\CustomerUnitTests.cs",
-              "RelativeToolTip": "CoreBanking.UnitTests\\CustomerUnitTests.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwCIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T08:12:33.122Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -60,9 +46,23 @@
               "RelativeDocumentMoniker": "CoreBanking.UnitTests\\TransactionUnitTests.cs",
               "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.UnitTests\\TransactionUnitTests.cs",
               "RelativeToolTip": "CoreBanking.UnitTests\\TransactionUnitTests.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAwCwAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAYwF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-16T08:46:28.64Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerUnitTests.cs",
+              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.UnitTests\\CustomerUnitTests.cs",
+              "RelativeDocumentMoniker": "CoreBanking.UnitTests\\CustomerUnitTests.cs",
+              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.UnitTests\\CustomerUnitTests.cs",
+              "RelativeToolTip": "CoreBanking.UnitTests\\CustomerUnitTests.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwDoAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T08:12:33.122Z",
               "IsPinned": true,
               "EditorCaption": ""
             },

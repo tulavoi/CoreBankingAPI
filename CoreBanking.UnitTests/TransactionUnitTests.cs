@@ -62,4 +62,52 @@ public class TransactionUnitTests(DatabaseFixture fixture)
 			Assert.Equal(depositAmount, transactions.First().Amount);
 		}
 	}
+
+	[Theory]
+	[InlineData(-100)]
+	[InlineData(0)]
+	public async Task Deposit_WithInvalidAmount_ReturnsBadRequest_DontUpdatesBalance(decimal depositAmount)
+	{
+		// Arrange
+		var services = _fixture.CreateService();
+		var customer = new Customer
+		{
+			Id = Guid.NewGuid(),
+			Name = "John Doe",
+			Address = "123A Main St",
+			Accounts = []
+		};
+		int DEFAULT_AMOUNT = 200;
+		var account = new Account
+		{
+			Id = Guid.NewGuid(),
+			CustomerId = customer.Id,
+			Balance = DEFAULT_AMOUNT,
+			AccountNumber = DateTime.UtcNow.Ticks.ToString()
+		};
+
+		using (var setupContext = new CoreBankingDbContext(_fixture.DbContextOptions))
+		{
+			setupContext.Customers.Add(customer);
+			setupContext.Accounts.Add(account);
+			await setupContext.SaveChangesAsync();
+		}
+
+		// Act
+		var result = await CoreBankingApi.Deposit(services, account.Id, new DepositionRequest
+		{
+			Amount = depositAmount,
+		});
+
+		// Assert
+		Assert.IsType<BadRequest>(result.Result);
+
+		using (var verifyContext = new CoreBankingDbContext(_fixture.DbContextOptions))
+		{
+			// Verify the account balance was not changed
+			var unchangedAccount = verifyContext.Accounts.FirstOrDefault(a => a.Id == account.Id);
+			Assert.NotNull(unchangedAccount);
+			Assert.Equal(DEFAULT_AMOUNT, unchangedAccount.Balance);
+		}
+	}
 }

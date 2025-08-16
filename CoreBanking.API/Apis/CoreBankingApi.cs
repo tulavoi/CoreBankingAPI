@@ -176,7 +176,7 @@ public static class CoreBankingApi
 			return TypedResults.BadRequest();
 		}
 
-		if (deposition.Amount == 0)
+		if (deposition.Amount <= 0)
 		{
 			services.Logger.LogError($"Amount must be greater than zero");
 			return TypedResults.BadRequest();
