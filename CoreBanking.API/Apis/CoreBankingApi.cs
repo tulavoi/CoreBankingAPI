@@ -299,7 +299,7 @@ public static class CoreBankingApi
 		return TypedResults.Ok(customer);
 	}
 
-	private static async Task<Ok<PaginationResponse<Customer>>> GetCustomers(
+	public static async Task<Ok<PaginationResponse<Customer>>> GetCustomers(
 			[AsParameters] CoreBankingServices services,
 			[AsParameters] PaginationRequest pagination
 		)
