@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.MigrationServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.UnitTests", "CoreBanking.UnitTests\CoreBanking.UnitTests.csproj", "{D99CD858-52BF-4F9C-8585-7F9F44203E99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBanking.IntegrationTests", "CoreBanking.IntegrationTests\CoreBanking.IntegrationTests.csproj", "{0F39199D-6CD3-4A7D-B9A5-72DA3B6FF8B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D99CD858-52BF-4F9C-8585-7F9F44203E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D99CD858-52BF-4F9C-8585-7F9F44203E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D99CD858-52BF-4F9C-8585-7F9F44203E99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F39199D-6CD3-4A7D-B9A5-72DA3B6FF8B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F39199D-6CD3-4A7D-B9A5-72DA3B6FF8B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F39199D-6CD3-4A7D-B9A5-72DA3B6FF8B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F39199D-6CD3-4A7D-B9A5-72DA3B6FF8B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

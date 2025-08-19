@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoreBanking.MigrationService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a5e2a0c4d9dc76527f0c6e10b33adc80fe88eb5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f359fa74fdeac503404630cd3976703b1a167d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoreBanking.MigrationService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoreBanking.MigrationService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

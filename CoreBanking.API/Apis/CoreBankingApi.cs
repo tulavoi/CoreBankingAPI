@@ -8,13 +8,15 @@ public static class CoreBankingApi
 		var v1 = vApi.MapGroup("api/v{version:apiVersion}/corebanking").HasApiVersion(1, 0);
 
 		v1.MapGet("/customers", GetCustomers);
+		v1.MapGet("/customers/{id:guid}", GetCustomerById);
 		v1.MapPost("/customers", CreateCustomer);
 
 		v1.MapGet("/accounts", GetAccounts);
+		v1.MapGet("/accounts/{accountNo}", GetAccountByNumber);
 		v1.MapPost("/accounts", CreateAccounts);
-		v1.MapPut("/accounts/{id:guid}/deposit", Deposit);
-		v1.MapPut("/accounts/{id:guid}/withdraw", Withdraw);
-		v1.MapPut("/accounts/{id:guid}/transfer", Transfer);
+		v1.MapPut("/accounts/{accountNo}/deposit", Deposit);
+		v1.MapPut("/accounts/{accountNo}/withdraw", Withdraw);
+		v1.MapPut("/accounts/{accountNo}/transfer", Transfer);
 
 		return endpoint;
 	}
@@ -22,13 +24,13 @@ public static class CoreBankingApi
 	#region Transfer
 	private static async Task<Results<Ok<Account>, BadRequest>> Transfer(
 			[AsParameters] CoreBankingServices services,
-			Guid id,
+			string accountNo,
 			TransferRequest transfer
 		)
 	{
-		if (id == Guid.Empty)
+		if (string.IsNullOrEmpty(accountNo))
 		{
-			services.Logger.LogError($"Account Id cannot be empty");
+			services.Logger.LogError($"Account Number cannot be empty");
 			return TypedResults.BadRequest();
 		}
 
@@ -44,7 +46,7 @@ public static class CoreBankingApi
 			return TypedResults.BadRequest();
 		}
 
-		var account = await services.DbContext.Accounts.FindAsync(id);
+		var account = await services.DbContext.Accounts.FirstOrDefaultAsync(a => a.AccountNumber == accountNo);
 
 		if (account == null)
 		{
@@ -108,13 +110,13 @@ public static class CoreBankingApi
 	#region Withdraw
 	private static async Task<Results<Ok<Account>, BadRequest>> Withdraw(
 			[AsParameters] CoreBankingServices services,
-			Guid id,
+			string accountNo,
 			WithdrawalRequest withdrawal
 		)
 	{
-		if (id == Guid.Empty)
+		if (string.IsNullOrEmpty(accountNo))
 		{
-			services.Logger.LogError($"Account Id cannot be empty");
+			services.Logger.LogError($"Account Number cannot be empty");
 			return TypedResults.BadRequest();
 		}
 
@@ -124,7 +126,7 @@ public static class CoreBankingApi
 			return TypedResults.BadRequest();
 		}
 
-		var account = await services.DbContext.Accounts.FindAsync(id);
+		var account = await services.DbContext.Accounts.FirstOrDefaultAsync(a => a.AccountNumber == accountNo);
 
 		if (account == null)
 		{
@@ -166,13 +168,13 @@ public static class CoreBankingApi
 	#region Deposit
 	public static async Task<Results<Ok<Account>, BadRequest>> Deposit(
 			[AsParameters] CoreBankingServices services,
-			Guid id,
+			string accountNo,
 			DepositionRequest deposition
 		)
 	{
-		if (id == Guid.Empty)
+		if (string.IsNullOrEmpty(accountNo))
 		{
-			services.Logger.LogError($"Account Id cannot be empty");
+			services.Logger.LogError($"Account Number cannot be empty");
 			return TypedResults.BadRequest();
 		}
 
@@ -182,7 +184,7 @@ public static class CoreBankingApi
 			return TypedResults.BadRequest();
 		}
 
-		var account = await services.DbContext.Accounts.FindAsync(id);
+		var account = await services.DbContext.Accounts.FirstOrDefaultAsync(a => a.AccountNumber == accountNo);
 
 		if (account == null)
 		{
@@ -196,7 +198,7 @@ public static class CoreBankingApi
 			services.DbContext.Transactions.Add(new Transaction
 			{
 				Id = Guid.CreateVersion7(),
-				AccountId = id,
+				AccountId = account.Id,
 				Amount = deposition.Amount,
 				DateUtc = DateTime.UtcNow,
 				Type = TransactionTypes.Deposit
@@ -227,8 +229,17 @@ public static class CoreBankingApi
 			return TypedResults.BadRequest();
 		}
 
-		account.Id = Guid.CreateVersion7();
-		account.Balance = 0;
+		if (account.Id == Guid.Empty)
+		{
+			account.Id = Guid.CreateVersion7();
+		}
+
+		if (account.Balance < 0)
+		{
+			services.Logger.LogError("Balance cannot be negative");
+			return TypedResults.BadRequest();
+		}
+
 		account.AccountNumber = GenerateAccountNumber();
 
 		services.DbContext.Accounts.Add(account);
@@ -269,6 +280,21 @@ public static class CoreBankingApi
 				.Take(pagination.PageSize)
 				.ToListAsync()
 		));
+	}
+
+	private static async Task<Results<Ok<Account>, NotFound>> GetAccountByNumber(
+			[AsParameters] CoreBankingServices services,
+			string accountNo
+		)
+	{
+		var account = await services.DbContext.Accounts.FirstOrDefaultAsync(a => a.AccountNumber == accountNo);
+
+		if (account == null)
+		{
+			services.Logger.LogError($"Account cannot found");
+			return TypedResults.NotFound();
+		}
+		return TypedResults.Ok(account);
 	}
 	#endregion
 
@@ -316,6 +342,22 @@ public static class CoreBankingApi
 				.Take(pagination.PageSize)
 				.ToListAsync()
 		));
+	}
+
+	public static async Task<Results<Ok<Customer>, NotFound>> GetCustomerById(
+			[AsParameters] CoreBankingServices services,
+			Guid id
+		)
+	{
+		var customer = await services.DbContext.Customers
+			.FirstOrDefaultAsync(c => c.Id == id);
+
+		if (customer == null)
+		{
+			services.Logger.LogError($"Customer cannot found");
+			return TypedResults.NotFound();
+		}
+		return TypedResults.Ok(customer);
 	}
 	#endregion
 }

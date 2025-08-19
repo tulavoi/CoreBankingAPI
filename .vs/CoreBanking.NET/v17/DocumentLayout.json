@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D99CD858-52BF-4F9C-8585-7F9F44203E99}|CoreBanking.UnitTests\\CoreBanking.UnitTests.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking.unittests\\customerunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D99CD858-52BF-4F9C-8585-7F9F44203E99}|CoreBanking.UnitTests\\CoreBanking.UnitTests.csproj|solutionrelative:corebanking.unittests\\customerunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D99CD858-52BF-4F9C-8585-7F9F44203E99}|CoreBanking.UnitTests\\CoreBanking.UnitTests.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking.unittests\\transactionunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D99CD858-52BF-4F9C-8585-7F9F44203E99}|CoreBanking.UnitTests\\CoreBanking.UnitTests.csproj|solutionrelative:corebanking.unittests\\transactionunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6F3C4C29-CA35-4374-9AFD-F0C1C7AEAFB1}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking.api\\apis\\corebankingapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F3C4C29-CA35-4374-9AFD-F0C1C7AEAFB1}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\apis\\corebankingapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F3C4C29-CA35-4374-9AFD-F0C1C7AEAFB1}|CoreBanking.API\\CoreBanking.API.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking.api\\corebanking.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{6F3C4C29-CA35-4374-9AFD-F0C1C7AEAFB1}|CoreBanking.API\\CoreBanking.API.csproj|solutionrelative:corebanking.api\\corebanking.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F39199D-6CD3-4A7D-B9A5-72DA3B6FF8B9}|CoreBanking.IntegrationTests\\CoreBanking.IntegrationTests.csproj|c:\\users\\khach\\onedrive\\documents\\asp.net\\nam.net\\corebanking.net\\corebanking.integrationtests\\integrationtest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F39199D-6CD3-4A7D-B9A5-72DA3B6FF8B9}|CoreBanking.IntegrationTests\\CoreBanking.IntegrationTests.csproj|solutionrelative:corebanking.integrationtests\\integrationtest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,46 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 193,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "IntegrationTest1.cs",
+              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.IntegrationTests\\IntegrationTest1.cs",
+              "RelativeDocumentMoniker": "CoreBanking.IntegrationTests\\IntegrationTest1.cs",
+              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.IntegrationTests\\IntegrationTest1.cs",
+              "RelativeToolTip": "CoreBanking.IntegrationTests\\IntegrationTest1.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAJ8AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T07:24:16.218Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "CoreBankingApi.cs",
               "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.API\\Apis\\CoreBankingApi.cs",
               "RelativeDocumentMoniker": "CoreBanking.API\\Apis\\CoreBankingApi.cs",
               "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.API\\Apis\\CoreBankingApi.cs",
               "RelativeToolTip": "CoreBanking.API\\Apis\\CoreBankingApi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4BAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAWwBUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T08:11:44.989Z",
-              "IsPinned": true
+              "WhenOpened": "2025-08-18T07:48:09.096Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TransactionUnitTests.cs",
-              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.UnitTests\\TransactionUnitTests.cs",
-              "RelativeDocumentMoniker": "CoreBanking.UnitTests\\TransactionUnitTests.cs",
-              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.UnitTests\\TransactionUnitTests.cs",
-              "RelativeToolTip": "CoreBanking.UnitTests\\TransactionUnitTests.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAsAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-16T08:46:28.64Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CustomerUnitTests.cs",
-              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.UnitTests\\CustomerUnitTests.cs",
-              "RelativeDocumentMoniker": "CoreBanking.UnitTests\\CustomerUnitTests.cs",
-              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.UnitTests\\CustomerUnitTests.cs",
-              "RelativeToolTip": "CoreBanking.UnitTests\\CustomerUnitTests.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAgwFMAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T08:12:33.122Z",
-              "IsPinned": true,
+              "Title": "CoreBanking.API.http",
+              "DocumentMoniker": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.API\\CoreBanking.API.http",
+              "RelativeDocumentMoniker": "CoreBanking.API\\CoreBanking.API.http",
+              "ToolTip": "C:\\Users\\khach\\OneDrive\\Documents\\ASP.Net\\Nam.Net\\CoreBanking.NET\\CoreBanking.API\\CoreBanking.API.http",
+              "RelativeToolTip": "CoreBanking.API\\CoreBanking.API.http",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-08-19T08:33:38.449Z",
               "EditorCaption": ""
             },
             {
