@@ -70,7 +70,7 @@
   },
   {
     "ContainingType": "CoreBanking.API.Apis.CoreBankingApi",
-    "Method": "GetAccountById",
+    "Method": "GetAccountByNumber",
     "RelativePath": "api/v{version:apiVersion}/corebanking/accounts/{accountNo}",
     "HttpMethod": "GET",
     "IsController": false,
